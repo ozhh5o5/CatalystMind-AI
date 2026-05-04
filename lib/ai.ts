@@ -162,7 +162,7 @@ export async function generateNovelCandidates(
 }
 
 function mockPredictProperties(
-  candidate: { formula: string; smiles?: string },
+  candidate: { name?: string; formula: string; smiles?: string },
   reactionType: ReactionType
 ): {
   activity: number
@@ -222,7 +222,7 @@ function mockPredictProperties(
 }
 
 export async function predictProperties(
-  candidate: { formula: string; smiles?: string },
+  candidate: { name?: string; formula: string; smiles?: string },
   reactionType: ReactionType
 ): Promise<{
   activity: number
